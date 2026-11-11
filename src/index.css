@@ -111,3 +111,10 @@ ul{padding:0;list-style:none}
 .gate-title{font-size:clamp(3.5rem,12vw,6rem);font-weight:800;line-height:.9;color:var(--crimson)}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
+
+/* Inversión */
+.answer{white-space:pre-wrap;line-height:1.7;max-width:70ch;color:#e4e4e7}
+.debt-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.6rem 0;border-top:1px solid var(--line)}
+.debt-row em{display:block;font-style:normal;color:var(--muted);font-size:.8125rem}
+.sources{display:grid;gap:.4rem;border-top:1px solid var(--line);padding-top:1rem}
+.sources a{color:var(--crimson-hot);text-underline-offset:3px;overflow-wrap:anywhere}

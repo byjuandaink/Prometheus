@@ -3,6 +3,7 @@ import useLocalStorage from './hooks/useLocalStorage';
 import Onboarding from './components/Onboarding';
 import Resumen from './components/Resumen';
 import Gastos from './components/Gastos';
+import Inversion from './components/Inversion';
 
 const TABS = [
   { id: 'resumen', label: 'Resumen' },
@@ -32,10 +33,12 @@ export default function App() {
       <main className="main">
         {tab === 'resumen' && <Resumen perfil={perfil} setPerfil={setPerfil} gastos={gastos} onReset={() => setPerfil(null)} />}
         {tab === 'gastos' && <Gastos gastos={gastos} setGastos={setGastos} />}
+        {tab === 'ahorro' && <Inversion perfil={perfil} gastos={gastos} />}
         {(tab === 'deudas' || tab === 'ahorro') && (
           <>
             <header className="page-head"><h2 className="display page-title">{TABS.find((t) => t.id === tab).label}</h2></header>
-            <section className="box"><p className="muted">Esta sección se construye en el siguiente paso.</p></section>
+            <section className="box">
+              <p className="muted">Esta sección se construye en el siguiente paso.</p></section>
           </>
         )}
       </main>
